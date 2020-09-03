@@ -1,0 +1,15 @@
+header { 
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    text-align: center;
+}
+img {
+    padding-right: 30px;
+    padding-left: 30px;
+}
