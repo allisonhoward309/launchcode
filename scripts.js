@@ -1,17 +1,45 @@
 window.addEventListener("load", function() {
     console.log('window loaded');
-    let newImage = [ "photos/shelf.jpg", "photos/tray.jpg"];
-    let next = document.getElementById("next");
-    let image = document.getElementById("craftsImg");
-
-    next.addEventListener("click", function(event){
-        if (image.src === "photos/sign.jpg") {
-            image.src = "photos/shelf.jpg";
-        } elseif (image.src === "photos/shelf.jpg") {
-            image.src = "photos/tray.jpg";
-        }   else {
-            image.src = "photos/sign.jpg";  
+    let newImage = new Collection([ "photos/sign.jpg", "photos/shelf.jpg", "photos/tray.jpg"], "craftsImg");
+    
+    
+    document.getElementById("next").onclick = function () {
+        newImage.next();
+    }
+function Collection(urls, imgID) {
+    let imgElement = document.getElementById(imgID);
+    let index = 0;
+    this.selectImg = function() {
+        imgElement.src = urls[index];
+    };
+    this.next = function(){
+        if(++index >= urls.length) {
+            index = 0;
         }
-    });
+        this.selectImg();
+    };
+    this.selectImg();
+};
+    
+// document.getElementById("back").onclick = function () {
+//     newImage.back();
+// }
+// function Collection(urls, imgID) {
+// let imgElement = document.getElementById(imgID);
+// let index = 0;
+// this.selectImg = function() {
+//     imgElement.src = urls[index];
+// };
+// // this.back = function(){
+// //     if(--index >= 0) {
+// //         index = urls.length-1;
+// //     }
+// //     this.selectImg();
+// // };
+// this.selectImg();
+// };
+
+
+
 
 });

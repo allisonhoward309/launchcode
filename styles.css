@@ -1,15 +1,47 @@
+html {
+	margin: 0;
+    padding: 10;
+    background-image: url(photos/background.jpg);
+    }
+main{ 
+    margin-left: 10%;
+    margin-right: 10%;
+    background: rgba(229, 218, 248, 0.75);
+}
 header { 
     text-align: center;
-    background-color: cornflowerblue;
+    background-color: rgb(87, 129, 239);
     color: white;
 }
 h1 {
     font-size: 50px;
+    font-family: "Impact", Charcoal, sans-serif;
 }
-h2 {
+th {
+    font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+td{
+    font-family: "Arial", Helvetica, sans-serif;
 }
 img {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 200px;
+}
+table {
+    size: 75%;
+}
+  #craftsImg {
+      float: right;
+  }
+  .button {
+      float: right;
+  }
+p {
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: 15px;
 }
